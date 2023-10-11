@@ -120,14 +120,40 @@ GROUP BY d.City, Tier
 ORDER BY ResponseCount desc;
 
 
+-- Q Where do respondents prefer to purchase energy drinks?
+select Purchase_location, count(*) as purch_cnt from fact_survey_responses
+group by Purchase_location
+order by purch_cnt desc
 
 
+-- Q What are the typical consumption situations for energy drinks among respondents?
+select Typical_consumption_situations, count(*) as cnt from fact_survey_responses
+group by Typical_consumption_situations
+order by cnt desc
+
+-----------------------------------------------------------------
+select Consume_time, count(*) as cnt from fact_survey_responses
+group by Consume_time
+order by cnt desc
+------------------------------------------------------------------
 
 
+-- Q What factors influence respondents' purchase decisions, such as price range and limited edition packaging?
+select Limited_edition_packaging, count(*) as Survey_answer
+from fact_survey_responses
+group by Limited_edition_packaging
+order by Survey_answer desc;
+
+select Price_range, count(*) as desired_price
+from fact_survey_responses
+group by Price_range
+order by desired_price desc;
 
 
-
-
+-- Q Which area of business should we focus more on our product development? (Branding/taste/availability)
+select Reasons_for_choosing_brands, count(*) from fact_survey_responses
+group by Reasons_for_choosing_brands
+order by count(*) desc
 
 
 
