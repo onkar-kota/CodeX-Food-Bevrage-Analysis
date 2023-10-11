@@ -18,6 +18,6 @@ Imagine yourself as Peter Pandey, and do the following tasks,
 
 ## Other resources Provided:
 
-Dataset required to generate Insights
-Metadata
-Survey questions
+- Dataset required to generate Insights
+- Metadata
+- Survey questions
